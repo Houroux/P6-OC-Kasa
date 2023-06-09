@@ -1,0 +1,18 @@
+.header__body {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&__nav {
+		display: flex;
+		justify-content: space-between;
+		width: 250px;
+		font-size: 24px;
+		color: #ff6060;
+		:visited {
+			color: #ff6060;
+		}
+		&__link {
+			text-decoration: none;
+		}
+	}
+}
