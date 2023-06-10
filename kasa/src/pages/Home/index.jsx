@@ -25,6 +25,8 @@ export default function Home() {
 	useEffect(() => {
 		getlogements();
 	}, []);
+
+	console.log(logements);
 	return (
 		<div className="home__body">
 			<div className="margin__main home__body__main ">

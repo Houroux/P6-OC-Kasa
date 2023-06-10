@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
+import "../../style/homeBanner.scss";
+import "../../style/aboutBanner.scss";
 
 export default function AboutBanner() {
-  return (
-    <div>AboutBanner</div>
-  )
+	return <div className="homeBanner aboutBanner"></div>;
 }
