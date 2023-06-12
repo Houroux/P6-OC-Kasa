@@ -29,17 +29,19 @@ export default function Home() {
 	console.log(logements);
 	return (
 		<div className="home__body">
-			<div className="margin__main home__body__main ">
+			<div className="margin__main">
 				<Header></Header>
-				<HomeBanner></HomeBanner>
-				<div className="cardsContainer">
-					{logements.map((logement) => (
-						<HomeCard
-							key={logement.id}
-							cover={logement.cover}
-							title={logement.title}
-						></HomeCard>
-					))}
+				<div className="home__body">
+					<HomeBanner></HomeBanner>
+					<div className="home__body__cardsContainer">
+						{logements.map((logement) => (
+							<HomeCard
+								key={logement.id}
+								cover={logement.cover}
+								title={logement.title}
+							></HomeCard>
+						))}
+					</div>
 				</div>
 			</div>
 			<Footer></Footer>

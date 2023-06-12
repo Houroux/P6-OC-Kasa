@@ -1,10 +1,12 @@
-.cardsContainer {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	width: 100%;
-	justify-items: center;
-	background: #f7f7f7;
-	border-radius: 25px;
-	margin-top: 40px;
-	justify-items: stretch;
+.home__body {
+	margin-top: 50px;
+	&__cardsContainer {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		width: 100%;
+		background: #f7f7f7;
+		border-radius: 25px;
+		margin: 40px 0;
+		justify-items: stretch;
+	}
 }

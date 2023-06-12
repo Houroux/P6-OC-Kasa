@@ -32,15 +32,17 @@ export default function About() {
 		<div>
 			<div className="margin__main">
 				<Header></Header>
-				<AboutBanner></AboutBanner>
-				<div className="aboutCardContainer">
-					{aboutData.map((about) => (
-						<AboutCard
-							key={about.title}
-							title={about.title}
-							description={about.description}
-						></AboutCard>
-					))}
+				<div className="about">
+					<AboutBanner></AboutBanner>
+					<div className="aboutCardContainer">
+						{aboutData.map((about) => (
+							<AboutCard
+								key={about.title}
+								title={about.title}
+								description={about.description}
+							></AboutCard>
+						))}
+					</div>
 				</div>
 			</div>
 			<Footer></Footer>

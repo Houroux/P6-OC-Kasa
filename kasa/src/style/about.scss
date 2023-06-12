@@ -1,6 +1,11 @@
-.aboutCardContainer {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	margin: 40px 100px;
+.about {
+	min-height: calc(100vh - calc(50px + 68px + 50px + 50px + 160px));
+
+	margin-top: 50px;
+	&CardContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		margin: 40px 100px;
+	}
 }
