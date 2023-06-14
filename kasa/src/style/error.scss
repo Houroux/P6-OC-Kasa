@@ -1,6 +1,7 @@
-$firstBP: 752px;
-$secondBP: 556px;
-
+$firstWidthBP: 752px;
+$secondWidthBP: 556px;
+$firstHeightBP: 780px;
+$secondHeightBP: 633px;
 .error__main {
 	display: flex;
 	margin-bottom: 50px;
@@ -18,10 +19,16 @@ $secondBP: 556px;
 		font-weight: 700;
 		font-size: 288px;
 		color: #ff6060;
-		@media (max-width: $firstBP) {
+		@media (max-width: $firstWidthBP) {
 			font-size: 200px;
 		}
-		@media (max-width: $secondBP) {
+		@media (max-height: $firstHeightBP) {
+			font-size: 200px;
+		}
+		@media (max-width: $secondWidthBP) {
+			font-size: 96px;
+		}
+		@media (max-height: $secondHeightBP) {
 			font-size: 96px;
 		}
 	}
@@ -33,11 +40,17 @@ $secondBP: 556px;
 		@media (max-width: 1060px) {
 			font-size: 30px;
 		}
-		@media (max-width: $firstBP) {
+		@media (max-width: $firstWidthBP) {
 			font-size: 24px;
 			padding: 0 20px;
 		}
-		@media (max-width: $secondBP) {
+		@media (max-height: $firstHeightBP) {
+			font-size: 24px;
+		}
+		@media (max-width: $secondWidthBP) {
+			font-size: 18px;
+		}
+		@media (max-height: $secondHeightBP) {
 			font-size: 18px;
 		}
 	}
@@ -48,7 +61,10 @@ $secondBP: 556px;
 		:visited {
 			color: #ff6060;
 		}
-		@media (max-width: $secondBP) {
+		@media (max-width: $secondWidthBP) {
+			font-size: 14px;
+		}
+		@media (max-height: $secondHeightBP) {
 			font-size: 14px;
 		}
 	}
