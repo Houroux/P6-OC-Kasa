@@ -10,4 +10,17 @@
 	color: white;
 	text-shadow: black 0 0 4px;
 	border-radius: 25px;
+	padding: 0 25px;
+	box-sizing: border-box;
+	@media (max-width: 1035px) {
+		font-size: 36px;
+	}
+	@media (max-width: 752px) {
+		margin: 0 25px;
+		width: calc(100% - 50px);
+	}
+	@media (max-width: 620px) {
+		font-size: 24px;
+		height: 120px;
+	}
 }

@@ -18,7 +18,6 @@ export default function Home() {
 				return response.json();
 			})
 			.then(function (myJson) {
-				console.log(myJson);
 				setlogements(myJson);
 			});
 	};
@@ -37,6 +36,7 @@ export default function Home() {
 						{logements.map((logement) => (
 							<HomeCard
 								key={logement.id}
+								id={logement.id}
 								cover={logement.cover}
 								title={logement.title}
 							></HomeCard>

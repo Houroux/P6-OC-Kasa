@@ -1,11 +1,23 @@
 .about {
-	min-height: calc(100vh - calc(50px + 68px + 50px + 50px + 160px));
-
+	min-height: calc(100vh - calc(50px + 68px + 50px + 160px));
+	@media (max-width: 633px) {
+		min-height: calc(100vh - calc(50px + 46.72px + 50px + 160px));
+	}
+	@media (max-width: 415px) {
+		min-height: calc(100vh - calc(50px + 32.22px + 50px + 160px));
+	}
 	margin-top: 50px;
 	&CardContainer {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
 		margin: 40px 100px;
+		@media (max-width: 950px) {
+			margin: 40px 0px;
+		}
+		@media (max-width: 752px) {
+			padding: 25px;
+			margin: 0px 0px;
+		}
 	}
 }

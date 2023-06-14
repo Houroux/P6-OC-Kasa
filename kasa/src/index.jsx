@@ -19,9 +19,10 @@ root.render(
 					element={<Home />}
 				/>
 				<Route
-					path="/location"
+					path="/location/:locationId"
 					element={<Location></Location>}
 				></Route>
+
 				<Route
 					path="/about"
 					element={<About></About>}

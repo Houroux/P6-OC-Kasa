@@ -8,5 +8,11 @@
 		border-radius: 25px;
 		margin: 40px 0;
 		justify-items: stretch;
+		@media (max-width: 1035px) {
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (max-width: 752px) {
+			grid-template-columns: 1fr;
+		}
 	}
 }

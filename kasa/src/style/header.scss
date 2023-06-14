@@ -1,7 +1,14 @@
+$firstBP: 633px;
+$secondBP: 415px;
+
 .header__body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	@media (max-width: 752px) {
+		margin: 0 25px;
+	}
+
 	&__nav {
 		display: flex;
 		justify-content: space-between;
@@ -9,11 +16,29 @@
 		font-size: 24px;
 		font-weight: 500;
 		color: #ff6060;
+		@media (max-width: $firstBP) {
+			font-size: 18px;
+			width: auto;
+			gap: 25px;
+		}
+		@media (max-width: $secondBP) {
+			font-size: 12px;
+			width: auto;
+			gap: 25px;
+		}
 		:visited {
 			color: #ff6060;
 		}
 		&__link {
 			text-decoration: none;
+		}
+	}
+	img {
+		@media (max-width: $firstBP) {
+			width: 145px;
+		}
+		@media (max-width: $secondBP) {
+			width: 100px;
 		}
 	}
 }

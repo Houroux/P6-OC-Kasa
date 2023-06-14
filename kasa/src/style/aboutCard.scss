@@ -1,5 +1,13 @@
+$firstBP: 752px;
+$secondBP: 510px;
 .aboutCard {
 	margin-bottom: 30px;
+	@media (max-width: $firstBP) {
+		height: 20px;
+	}
+	@media (max-width: $secondBP) {
+		height: 10px;
+	}
 	&Head {
 		background: #ff6060;
 		border-radius: 5px;
@@ -9,10 +17,22 @@
 		align-items: center;
 		padding: 0 10px;
 		cursor: pointer;
+		@media (max-width: $firstBP) {
+			height: 40px;
+		}
+		@media (max-width: $secondBP) {
+			height: 30px;
+		}
 		h3 {
 			color: white;
 			font-size: 24px;
 			font-weight: 400;
+			@media (max-width: $firstBP) {
+				font-size: 20px;
+			}
+			@media (max-width: $secondBP) {
+				font-size: 16px;
+			}
 		}
 		&Opened {
 			border-radius: 5px 5px 0 0;
@@ -23,5 +43,20 @@
 		background: #ff606059;
 		border-radius: 0 0 5px 5px;
 		text-align: justify;
+		@media (max-width: $firstBP) {
+			font-size: 14px;
+		}
+		@media (max-width: $secondBP) {
+			font-size: 12px;
+		}
+	}
+	img {
+		height: 40px;
+		@media (max-width: $firstBP) {
+			height: 30px;
+		}
+		@media (max-width: $secondBP) {
+			height: 20px;
+		}
 	}
 }

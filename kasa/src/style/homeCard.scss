@@ -9,4 +9,8 @@
 	padding: 20px;
 	margin: 25px;
 	border-radius: 10px;
+	text-decoration: none;
+	@media (max-width: 620px) {
+		height: 250px;
+	}
 }

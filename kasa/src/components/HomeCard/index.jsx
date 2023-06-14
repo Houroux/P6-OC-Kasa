@@ -1,14 +1,17 @@
 import React from "react";
 import "../../style/homeCard.scss";
-export default function HomeCard({ cover, title }) {
+import { Link } from "react-router-dom";
+
+export default function HomeCard({ cover, title, id }) {
 	return (
-		<div
+		<Link
+			to={`/location/${id}`}
 			style={{
 				backgroundImage: `url(${cover})`,
 			}}
 			className="homeCard"
 		>
 			{title}
-		</div>
+		</Link>
 	);
 }

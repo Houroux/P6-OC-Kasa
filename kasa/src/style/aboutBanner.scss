@@ -1,4 +1,7 @@
 .aboutBanner {
 	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
 		center/cover url(../images/aboutBannerImg.jpg);
+	@media (max-width: 620px) {
+		height: 220px;
+	}
 }
