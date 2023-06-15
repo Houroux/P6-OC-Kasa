@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Slideshow from "../../components/Slideshow";
 import { useParams } from "react-router-dom";
 
 export default function Location() {
 	const { locationId } = useParams();
 	const [isLoading, setLoading] = useState(true);
-	let logements;
-	let logement;
+	const [logement, setLogement] = useState({});
 	const getLogements = () => {
+		let logements;
 		fetch("../../Data/logements.json", {
 			headers: {
 				"Content-Type": "application/json",
@@ -20,17 +21,16 @@ export default function Location() {
 			})
 			.then(function (myJson) {
 				logements = myJson;
-				// console.log(logements);
-
-				const logementArray = logements.filter(
+				let logementArray = logements.find(
 					(logement) => logement.id === locationId
 				);
-				logement = logementArray[0];
-				console.log(logement);
+				setLogement(logementArray);
 				setLoading(false);
 			});
 	};
+
 	getLogements();
+	console.log(logement);
 
 	return isLoading ? (
 		<div>
@@ -44,7 +44,9 @@ export default function Location() {
 		<div>
 			<div className="margin__main">
 				<Header></Header>
-				<p>{logement.title}</p>
+				<div className="locationContainer">
+					<Slideshow pictures={logement?.pictures}></Slideshow>
+				</div>
 			</div>
 			<Footer></Footer>
 		</div>

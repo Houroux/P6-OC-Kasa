@@ -16,6 +16,7 @@ $secondBP: 510px;
 		justify-content: space-between;
 		align-items: center;
 		padding: 0 10px;
+
 		cursor: pointer;
 		@media (max-width: $firstBP) {
 			height: 40px;
@@ -43,6 +44,10 @@ $secondBP: 510px;
 		background: #ff606059;
 		border-radius: 0 0 5px 5px;
 		text-align: justify;
+		animation: 2s fadeIn;
+		animation-fill-mode: forwards;
+
+		visibility: hidden;
 		@media (max-width: $firstBP) {
 			font-size: 14px;
 		}
@@ -52,11 +57,22 @@ $secondBP: 510px;
 	}
 	img {
 		height: 40px;
+		// animation: 2s fadeIn;
+		// animation-fill-mode: forwards;
 		@media (max-width: $firstBP) {
 			height: 30px;
 		}
 		@media (max-width: $secondBP) {
 			height: 20px;
 		}
+	}
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		visibility: visible;
+		opacity: 1;
 	}
 }

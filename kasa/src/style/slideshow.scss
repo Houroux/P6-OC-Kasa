@@ -1,0 +1,17 @@
+.containerSlide {
+	max-width: 1240px;
+	margin: auto;
+
+	.img {
+		background: center/cover;
+		height: 415px;
+		border-radius: 25px;
+	}
+}
+.indicator {
+	cursor: pointer;
+	padding: 0px;
+	text-align: center;
+	border: 1px #666 solid;
+	margin: 0;
+}

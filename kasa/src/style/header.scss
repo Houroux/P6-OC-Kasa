@@ -31,6 +31,9 @@ $secondBP: 415px;
 		}
 		&__link {
 			text-decoration: none;
+			&.active {
+				text-decoration: underline;
+			}
 		}
 	}
 	img {
