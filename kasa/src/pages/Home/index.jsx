@@ -25,7 +25,7 @@ export default function Home() {
 		getlogements();
 	}, []);
 
-	console.log(logements);
+	// console.log(logements);
 	return (
 		<div className="home__body">
 			<div className="margin__main">

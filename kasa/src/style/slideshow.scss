@@ -1,17 +1,40 @@
-.containerSlide {
-	max-width: 1240px;
+$secondBP: 970px;
+$fourthBP: 600px;
+.slideshowContainer {
+	position: relative;
 	margin: auto;
-
-	.img {
-		background: center/cover;
-		height: 415px;
-		border-radius: 25px;
+	margin-top: 50px;
+	@media (max-width: $secondBP) {
+		margin-top: 25px;
 	}
-}
-.indicator {
-	cursor: pointer;
-	padding: 0px;
-	text-align: center;
-	border: 1px #666 solid;
-	margin: 0;
+	.slide {
+		&Img {
+			background: center/cover;
+			height: 415px;
+			border-radius: 25px;
+			@media (max-width: $secondBP) {
+				height: 300px;
+			}
+			@media (max-width: $fourthBP) {
+				height: 250px;
+			}
+		}
+		&Number {
+			position: absolute;
+			bottom: 5%;
+			left: 49%;
+			color: white;
+		}
+		&Button {
+			border: 0;
+			background: 0;
+			cursor: pointer;
+			margin: 0 20px;
+			position: absolute;
+			top: 40%;
+			&Next {
+				right: 0;
+			}
+		}
+	}
 }

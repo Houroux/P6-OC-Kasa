@@ -1,12 +1,12 @@
-$firstBP: 752px;
+$firstBP: 808px;
 $secondBP: 510px;
 .aboutCard {
 	margin-bottom: 30px;
 	@media (max-width: $firstBP) {
-		height: 20px;
+		margin-bottom: 20px;
 	}
 	@media (max-width: $secondBP) {
-		height: 10px;
+		margin-bottom: 10px;
 	}
 	&Head {
 		background: #ff6060;
@@ -41,10 +41,11 @@ $secondBP: 510px;
 	}
 	p {
 		padding: 5px 10px;
-		background: #ff606059;
+		color: #ff6060;
+		background: #f7f7f7;
 		border-radius: 0 0 5px 5px;
 		text-align: justify;
-		animation: 2s fadeIn;
+		animation: 1s fadeIn;
 		animation-fill-mode: forwards;
 
 		visibility: hidden;

@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Slideshow from "../../components/Slideshow";
+import Collapse from "../../components/Collapse";
 import { useParams } from "react-router-dom";
+import OrangeStar from "../../images/orangeStar.png";
+import GreyStar from "../../images/greyStar.png";
+import "../../style/location.scss";
 
 export default function Location() {
 	const { locationId } = useParams();
@@ -28,9 +32,11 @@ export default function Location() {
 				setLoading(false);
 			});
 	};
+	useEffect(() => {
+		getLogements();
+	}, []);
 
-	getLogements();
-	console.log(logement);
+	const rangeRating = [1, 2, 3, 4, 5];
 
 	return isLoading ? (
 		<div>
@@ -45,7 +51,67 @@ export default function Location() {
 			<div className="margin__main">
 				<Header></Header>
 				<div className="locationContainer">
-					<Slideshow pictures={logement?.pictures}></Slideshow>
+					<Slideshow pictures={logement.pictures}></Slideshow>
+					<div className="locationInfo">
+						<div className="locationInfoLeft">
+							<h1 className="locationInfoLeftTitle">{logement.title}</h1>
+							<p className="locationInfoLeftLocalisation">
+								{logement.location}
+							</p>
+							<div className="locationInfoLeftTags">
+								<ul className="tagsList">
+									{logement.tags.map((tag) => (
+										<li
+											key={tag}
+											className="tagsListElement"
+										>
+											{tag}
+										</li>
+									))}
+								</ul>
+							</div>
+						</div>
+						<div className="locationInfoRight">
+							<div className="host">
+								<p className="hostName">{logement.host.name}</p>
+								<img
+									src={logement.host.picture}
+									alt="Host"
+								/>
+							</div>
+							<div className="rating">
+								{rangeRating.map((rangeElem) =>
+									logement.rating >= rangeElem ? (
+										<img
+											src={OrangeStar}
+											key={rangeElem.toString()}
+											className="orangeStar"
+											alt="Etoile orange"
+										></img>
+									) : (
+										<img
+											src={GreyStar}
+											key={rangeElem.toString()}
+											className="greyStar"
+											alt="Etoile grise"
+										></img>
+									)
+								)}
+							</div>
+						</div>
+					</div>
+					<div className="collapses">
+						<Collapse
+							className="collapse"
+							description={logement.description}
+							equipments={0}
+						></Collapse>
+						<Collapse
+							className="collapse"
+							description={0}
+							equipments={logement.equipments}
+						></Collapse>
+					</div>
 				</div>
 			</div>
 			<Footer></Footer>
