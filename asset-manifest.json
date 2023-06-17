@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/P6-OC-Kasa/static/css/main.90ae19d0.css",
+    "main.js": "/P6-OC-Kasa/static/js/main.4639ded2.js",
+    "static/media/aboutBannerImg.jpg": "/P6-OC-Kasa/static/media/aboutBannerImg.e54ae93d36cfba861b65.jpg",
+    "static/media/homeBannerImg.jpg": "/P6-OC-Kasa/static/media/homeBannerImg.61352a7ae7ebff30e925.jpg",
+    "static/media/logo.jpg": "/P6-OC-Kasa/static/media/logo.fdc85ccf92a88c195478.jpg",
+    "index.html": "/P6-OC-Kasa/index.html",
+    "main.90ae19d0.css.map": "/P6-OC-Kasa/static/css/main.90ae19d0.css.map",
+    "main.4639ded2.js.map": "/P6-OC-Kasa/static/js/main.4639ded2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.90ae19d0.css",
+    "static/js/main.4639ded2.js"
+  ]
+}
