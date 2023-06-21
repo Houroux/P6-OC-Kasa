@@ -2,6 +2,13 @@ $firstBP: 970px;
 $secondBP: 768px;
 
 .collapse {
+	margin-bottom: 30px;
+	@media (max-width: $firstBP) {
+		margin-bottom: 20px;
+	}
+	@media (max-width: $secondBP) {
+		margin-bottom: 10px;
+	}
 	&Head {
 		background: #ff6060;
 		border-radius: 5px;
@@ -41,6 +48,7 @@ $secondBP: 768px;
 		font-size: 18px;
 		visibility: hidden;
 		list-style-type: none;
+
 		@media (max-width: $firstBP) {
 			font-size: 12px;
 		}

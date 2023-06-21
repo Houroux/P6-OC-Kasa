@@ -1,78 +1,29 @@
-import React, { useState } from "react";
+import React, { Children, useState } from "react";
 import arrowClosed from "../../images/arrowClosed.png";
 import arrowOpened from "../../images/arrowOpened.png";
 import "../../style/collapse.scss";
 
-export default function Collapse({ description, equipments }) {
-	const [isClosed, setIsClosed] = useState(true);
-	return description ? (
-		isClosed ? (
-			<div className="collapse descriptionContainer">
-				<div
-					className="collapseHead descriptionHead"
-					onClick={() => setIsClosed(false)}
-				>
-					Description
-					<img
-						src={arrowClosed}
-						alt="fleche d'ouverture"
-					/>
-				</div>
-			</div>
-		) : (
-			<div className="collapse descriptionContainer">
-				<div
-					className="collapseHead descriptionHead"
-					onClick={() => setIsClosed(true)}
-				>
-					Description
-					<img
-						src={arrowOpened}
-						alt="fleche d'ouverture"
-					/>
-				</div>
+import "../../style/aboutCard.scss";
 
-				<div
-					className="descriptionOpened"
-					onClick={() => setIsClosed(false)}
-				>
-					<p>{description}</p>
-				</div>
-			</div>
-		)
-	) : isClosed ? (
-		<div className="collapse equipmentsContainer">
+export default function Collapse({ title, children }) {
+	const [isClosed, setIsClosed] = useState(false);
+	const toggleDropDown = () => {
+		setIsClosed(!isClosed);
+	};
+	return (
+		<div className="collapse descriptionContainer">
 			<div
-				className="collapseHead equipmentsHead"
-				onClick={() => setIsClosed(false)}
+				className="collapseHead descriptionHead"
+				onClick={() => toggleDropDown()}
 			>
-				Équipements
+				{title}
 				<img
-					src={arrowClosed}
-					alt="fleche d'ouverture"
-				/>
-			</div>
-		</div>
-	) : (
-		<div className="collapse equipmentsContainer">
-			<div
-				className="collapseHead equipmentsHead"
-				onClick={() => setIsClosed(true)}
-			>
-				Équipements
-				<img
-					src={arrowOpened}
-					alt="fleche d'ouverture"
+					src={isClosed ? arrowClosed : arrowOpened}
+					alt={isClosed ? "fleche d'ouverture" : "fleche de fermeture"}
 				/>
 			</div>
 
-			<div className="equipmentsOpened">
-				<ul>
-					{equipments.map((equipment) => (
-						<li key={equipment}>{equipment}</li>
-					))}
-				</ul>
-			</div>
+			{isClosed && <div className="descriptionOpened">{children}</div>}
 		</div>
 	);
 }

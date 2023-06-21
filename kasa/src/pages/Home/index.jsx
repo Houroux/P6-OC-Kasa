@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../../style/home.scss";
 import Header from "../../components/Header";
-import HomeBanner from "../../components/HomeBanner";
+import Banner from "../../components/Banner";
 import HomeCard from "../../components/HomeCard";
 import Footer from "../../components/Footer";
 
@@ -31,7 +31,7 @@ export default function Home() {
 			<div className="margin__main">
 				<Header></Header>
 				<div className="home__body">
-					<HomeBanner></HomeBanner>
+					<Banner className="homeBanner">Chez vous, partout et ailleurs</Banner>
 					<div className="home__body__cardsContainer">
 						{logements.map((logement) => (
 							<HomeCard

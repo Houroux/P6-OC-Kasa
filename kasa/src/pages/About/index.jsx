@@ -1,8 +1,9 @@
 import React from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import AboutBanner from "../../components/AboutBanner";
-import AboutCard from "../../components/AboutCard";
+import Banner from "../../components/Banner";
+
+import Collapse from "../../components/Collapse";
 import "../../style/about.scss";
 
 export default function About() {
@@ -33,14 +34,15 @@ export default function About() {
 			<div className="margin__main">
 				<Header></Header>
 				<div className="about">
-					<AboutBanner></AboutBanner>
+					<Banner className="homeBanner aboutBanner">&nbsp;&nbsp;</Banner>
 					<div className="aboutCardContainer">
 						{aboutData.map((about) => (
-							<AboutCard
+							<Collapse
 								key={about.title}
 								title={about.title}
-								description={about.description}
-							></AboutCard>
+							>
+								<p>{about.description}</p>
+							</Collapse>
 						))}
 					</div>
 				</div>

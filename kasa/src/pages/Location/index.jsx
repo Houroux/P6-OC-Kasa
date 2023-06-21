@@ -101,16 +101,16 @@ export default function Location() {
 						</div>
 					</div>
 					<div className="collapses">
-						<Collapse
-							className="collapse"
-							description={logement.description}
-							equipments={0}
-						></Collapse>
-						<Collapse
-							className="collapse"
-							description={0}
-							equipments={logement.equipments}
-						></Collapse>
+						<Collapse title="Description">
+							<p>{logement.description}</p>
+						</Collapse>
+						<Collapse title="Equipement">
+							<ul>
+								{logement.equipments.map((equipment) => (
+									<li key={equipment}>{equipment}</li>
+								))}
+							</ul>
+						</Collapse>
 					</div>
 				</div>
 			</div>
