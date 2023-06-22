@@ -1,4 +1,4 @@
-import React, { Children, useState } from "react";
+import React, { useState } from "react";
 import arrowClosed from "../../images/arrowClosed.png";
 import arrowOpened from "../../images/arrowOpened.png";
 import "../../style/collapse.scss";
