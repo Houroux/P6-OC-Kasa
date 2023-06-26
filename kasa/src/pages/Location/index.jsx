@@ -107,7 +107,7 @@ export default function Location() {
 						<Collapse title="Description">
 							<p>{logement.description}</p>
 						</Collapse>
-						<Collapse title="Equipement">
+						<Collapse title="Équipements">
 							<ul>
 								{logement.equipments.map((equipment) => (
 									<li key={equipment}>{equipment}</li>
