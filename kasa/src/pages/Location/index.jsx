@@ -3,6 +3,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Slideshow from "../../components/Slideshow";
 import Collapse from "../../components/Collapse";
+import Loader from "../../components/Loader";
 import { useParams } from "react-router-dom";
 import OrangeStar from "../../images/orangeStar.png";
 import GreyStar from "../../images/greyStar.png";
@@ -42,7 +43,9 @@ export default function Location() {
 		<div>
 			<div className="margin__main">
 				<Header></Header>
-				<p>Loading</p>
+				<div className="locationContainer">
+					<Loader></Loader>
+				</div>
 			</div>
 			<Footer></Footer>
 		</div>
