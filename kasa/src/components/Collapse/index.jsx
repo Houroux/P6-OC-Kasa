@@ -1,15 +1,13 @@
 import React, { useState } from "react";
-import arrowClosed from "../../images/arrowClosed.png";
 import arrowOpened from "../../images/arrowOpened.png";
 import "../../style/collapse.scss";
 
-import "../../style/aboutCard.scss";
-
 export default function Collapse({ title, children }) {
-	const [isClosed, setIsClosed] = useState(false);
+	const [isOpened, setIsOpened] = useState(false);
 	const toggleDropDown = () => {
-		setIsClosed(!isClosed);
+		setIsOpened(!isOpened);
 	};
+
 	return (
 		<div className="collapse descriptionContainer">
 			<div
@@ -18,12 +16,15 @@ export default function Collapse({ title, children }) {
 			>
 				{title}
 				<img
-					src={isClosed ? arrowClosed : arrowOpened}
-					alt={isClosed ? "fleche d'ouverture" : "fleche de fermeture"}
+					className={isOpened ? "arrowClosed" : "arrowOpened"}
+					// className={isOpened ? "arrowClosed" : "arrowOpened"}
+					src={arrowOpened}
+					alt="fleche"
 				/>
 			</div>
-
-			{isClosed && <div className="descriptionOpened">{children}</div>}
+			<div className={isOpened ? "descriptionOpened" : "descriptionClosed"}>
+				{children}
+			</div>
 		</div>
 	);
 }

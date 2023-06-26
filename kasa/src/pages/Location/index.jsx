@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import Slideshow from "../../components/Slideshow";
 import Collapse from "../../components/Collapse";
 import Loader from "../../components/Loader";
+import Error from "../../pages/Error";
 import { useParams } from "react-router-dom";
 import OrangeStar from "../../images/orangeStar.png";
 import GreyStar from "../../images/greyStar.png";
@@ -38,16 +39,16 @@ export default function Location() {
 	}, []);
 
 	const rangeRating = [1, 2, 3, 4, 5];
-
+	if (logement === undefined) return <Error />;
 	return isLoading ? (
 		<div>
 			<div className="margin__main">
-				<Header></Header>
+				<Header />
 				<div className="locationContainer">
 					<Loader></Loader>
 				</div>
 			</div>
-			<Footer></Footer>
+			<Footer />
 		</div>
 	) : (
 		<div>
