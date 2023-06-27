@@ -45,17 +45,14 @@ $secondBP: 768px;
 		}
 	}
 	.descriptionClosed {
-		transition: all 1s ease-in-out;
-		transform-origin: left top;
-		transform: scaleY(0);
-		p {
-			height: 0;
-		}
+		max-height: 0;
+		transition: 0.5s ease-in-out;
+		opacity: 0;
 	}
 	.descriptionOpened {
 		transition: all 1s ease-in-out;
-		transform-origin: left top;
-		transform: scaleY(1);
+		max-height: 200px;
+		opacity: 1;
 	}
 	p,
 	ul {
