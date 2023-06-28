@@ -16,8 +16,7 @@ export default function Collapse({ title, children }) {
 			>
 				{title}
 				<img
-					className={isOpened ? "arrowClosed" : "arrowOpened"}
-					// className={isOpened ? "arrowClosed" : "arrowOpened"}
+					className={isOpened ? "arrowOpened" : "arrowClosed"}
 					src={arrowOpened}
 					alt="fleche"
 				/>
