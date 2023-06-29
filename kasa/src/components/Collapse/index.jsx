@@ -9,9 +9,9 @@ export default function Collapse({ title, children }) {
 	};
 
 	return (
-		<div className="collapse descriptionContainer">
+		<div className="collapse">
 			<div
-				className="collapseHead descriptionHead"
+				className="collapseHead"
 				onClick={() => toggleDropDown()}
 			>
 				{title}
