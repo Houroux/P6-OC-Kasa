@@ -10,22 +10,22 @@ export default function About() {
 		{
 			title: "Fiabilité",
 			description:
-				"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia dolorem ab magnam reiciendis velit sapiente in id ea, quod veniam hic ratione dolor cum neque facere. Earum blanditiis quidem soluta.",
+				"Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.",
 		},
 		{
 			title: "Respect",
 			description:
-				"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus laborum nam, ea dolorum delectus assumenda et distinctio commodi, sint eos, harum libero unde dicta doloremque ducimus maxime sunt! Sunt, asperiores.",
+				"La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.",
 		},
 		{
 			title: "Service",
 			description:
-				"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, placeat voluptates, reiciendis hic sapiente voluptas ut praesentium eaque qui minus a minima. Iste corrupti officia quasi esse animi voluptatem odio.",
+				"La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.",
 		},
 		{
 			title: "Sécurité",
 			description:
-				"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi alias magnam esse delectus minima necessitatibus eum similique beatae ad ex molestiae perspiciatis optio, saepe totam doloribus recusandae excepturi dolor eligendi!",
+				"La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.",
 		},
 	];
 	return (
